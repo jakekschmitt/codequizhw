@@ -6,8 +6,8 @@ const startButton = document.getElementById('start-btn');
   const resultForm = document.getElementById('form-result');
   var timer = document.querySelector("#time");
 
-
-  let numberOfRightAnswers = 0; //1. How many answers were correct
+// Number of Correct/Right Answers
+  let numberOfRightAnswers = 0;
   let randomQuestions, currentQuestionIndex;
   let currentQuestion = 1;
 
@@ -61,7 +61,8 @@ function setTime() {
     currentQuestion = 1;
     document.getElementById('current-question').innerHTML = currentQuestion;
   
-    //3.  reset the counter after the test started 
+    
+    
     countRightAnswers = 0;
   
     document.getElementById('all-questions2').innerHTML = questions.length;
@@ -115,16 +116,13 @@ function setTime() {
     }
   
   
-    //2. if the answer is correct
     if (selectedButton.dataset = correct) {
-      countRightAnswers++; //+1
+      countRightAnswers++;
     }
 
-  
-    //5. to show the score inside <span>
     document.getElementById('right-answers').innerHTML = countRightAnswers; 
     document.getElementById('answers-percent').innerHTML = ((100 * countRightAnswers)/questions.length).toFixed(0);
-    //prevent multiclicking 
+ 
     document.getElementById('answer-buttons').classList.add('no-click'); 
   }
   
@@ -145,36 +143,26 @@ function setTime() {
   }
 
 const questions = [
+    {
+        question: 'What is 22 * 4?',
+        answers: [
+          { text: '96', correct: false },
+          { text: '88', correct: true }
+        ]
+      }    
   {
-    question: 'What is 5 + 5?',
+    question: 'What is the Capital of Oregon?',
     answers: [
-      { text: '10', correct: true },
-      { text: '55', correct: false }
+      { text: 'Portland', correct: true },
+      { text: 'Vancouver', correct: false }
     ]
   },
   {
-    question: 'Who is the best instructor?',
+    question: 'Who is the best basketball player?',
     answers: [
-      { text: 'Chad', correct: true },
-      { text: 'Lee', correct: true },
-      { text: 'Alexis', correct: true },
-      { text: 'Substitute Guy', correct: true }
+      { text: 'Kobe', correct: true },
+      { text: 'Lebron', correct: false },
     ]
   },
-  {
-    question: 'What does JSON stand for?',
-    answers: [
-      { text: 'Jerry Springer Online Network', correct: false },
-      { text: 'Javascript Object Notation', correct: true },
-      { text: 'Joomla Standard Object Notation', correct: false },
-      { text: 'IDK', correct: false }
-    ]
-  },
-  {
-    question: 'What is 4 * 2?',
-    answers: [
-      { text: '6', correct: false },
-      { text: '8', correct: true }
-    ]
-  }
+
 ]
