@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+  <title></title>
+</head>
+
+<body>
+ 
+  <div class="container">
+
+    <div class="block content">
+    
+      <div class="wrapper">
+        <div class="col-md-3 offset-md-6 border border-primary">Time Left: <span id="time"></span></div>
+        <!-- time remaining -->
+
+        <form id='form-result' class="hide" action="">
+          <div class="SP-container">
+            <div class="model-text model-text-bigger">Finished!</div>
+            <div class="model-text">Correct Answers:</div>
+<!--Show correct answers-->
+            <div class="model-text"><span id="right-answers" class="count"> 12 </span> of <span id="all-questions" class="count">count-of-questions</span> (<span id="answers-percent"></span>%)</div> 
+          </div>
+        </form>
+
+          <div id="question-container" class="hide">
+            <div class="number-of-question-text">Question № <span id="current-question">YYY</span> of <span id="all-questions2">XXX</span></div>
+            <div id="question">Question</div>
+            <div id="answer-buttons">
+              <button class="btn">Answer #1</button>
+              <button class="btn">Answer #2</button>
+              <button class="btn">Answer #3</button>
+              <button class="btn">Answer #4</button>
+            </div>
+          </div>
+          <!--Start/Next buttons-->
+          <div class="controls">
+            <button id="start-btn" class="start-btn">Start</button>
+            <button id="next-btn" class="next-btn hide">Next</button>
+          </div>
+
+        </div>
+
+      </div>
+  
+
+    </div>
+
+
+
+
+</body>
+</html>
